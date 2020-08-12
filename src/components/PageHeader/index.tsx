@@ -8,6 +8,7 @@ import backIcon from '../../assets/images/icons/back.svg';
 
 interface PageHeaderProps {
     title: string;
+    description?: string;
 }
 
 const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
@@ -22,6 +23,10 @@ const PageHeader: React.FunctionComponent<PageHeaderProps> = (props) => {
 
             <div className="header-content">
                 <strong>{props.title}</strong>
+                {/* - - - CRIAÇÃO DE OPERAÇÃO TERNARIA - - - */}
+                {/* { props.description ? <p>{props.description}</p> : null } */}
+                {/* { props.description && <p>{props.description}</p> } */}
+                { props.description && <p>{props.description}</p> }
 
                 {props.children}
             </div>
